@@ -13,12 +13,13 @@ public class App
         System.out.println( "Hello World!" );
         App app = new App();
 		app.paralleSteam();
+		//need add some changes
     }
     
     private void paralleSteam() {
 
-		Arrays.asList("a1", "a2", "b1", "c2", "c1").stream().filter(s-> {
-			return s.length()>1;}).forEach(s->System.out.println(s));	// plus sorted
+		Arrays.asList("m1", "m2", "n1", "b2", "b1").stream().filter(s-> {
+			return s.length()>1;}).forEach(s->System.out.println(s));
 		Arrays.asList("a1", "a2", "b1", "c2", "c1").parallelStream().filter(s -> {
 			System.out.format("filter: %s [%s]\n", s, Thread.currentThread().getName());
 			return true;
